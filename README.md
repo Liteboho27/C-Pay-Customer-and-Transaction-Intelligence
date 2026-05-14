@@ -24,13 +24,14 @@ Table description
 The dataset is simulated and based on publicly available information about Chaperone Lesotho and the broader Lesotho mobile money market. All figures are illustrative.
 
 # 🛠️ Data Preparation
-Before any analysis, the raw CSVs imported from C-Pay's operational systems required structural cleanup. Column names contained spaces and inconsistent casing, and data types were stored as generic text rather than typed fields. I used ALTER TABLE ... CHANGE COLUMN statements in MySQL to rename columns to snake_case conventions and assign appropriate data types — VARCHAR for identifiers, DATE for temporal fields, and DECIMAL(10,2) for all monetary values.
+Before any analysis, the raw CSV files required structural cleanup. Column names contained spaces and inconsistent casing, and data types were stored as generic text rather than typed fields. I used ALTER TABLE ... CHANGE COLUMN statements in MySQL to rename columns to snake_case conventions and assign appropriate data types — VARCHAR for identifiers, DATE for temporal fields, and DECIMAL(10,2) for all monetary values.
 
 # 🔍 Key Findings
 
-## 💰 1. Revenue is Dangerously Concentrated in a Small Customer Segment
-The top 10 customers by transaction value — out of 500 — account for a disproportionate share of total platform volume. In any payments business, this level of concentration represents a retention risk: losing even two or three of these customers would materially impact monthly revenue.
-✅ Recommendation: C-Pay should identify these high-value customers and enrol them in a loyalty or priority service tier — faster transaction processing, dedicated support, or fee waivers on high-value transfers. Protecting this segment is cheaper than replacing it.
+💰 1. Revenue is Broadly Distributed — But Individual Accounts Carry Disproportionate Weight
+The top 10 customers by transaction value account for only 5.41% of total platform transaction value across 500 customers. Far from being a concentration risk, this is a sign of a healthy, distributed revenue base — no single customer or small group can destabilise C-Pay's income by leaving. However, a closer look reveals something worth noting: all 10 of C-Pay's highest-value customers are individual account holders, not merchants or SMEs. For a platform that generates higher fee revenue per transaction from B2B clients like bulk payment corporates and merchants, this suggests that C-Pay's business and merchant segments are underperforming relative to their revenue potential. In short, the consumer base is healthy and well distributed, but the commercial segment is not pulling its weight.
+
+✅ Recommendation: C-Pay should investigate why merchant and SME accounts are not appearing among the top transaction value customers. Are merchants underusing the platform? Are they transacting elsewhere? A targeted merchant activation campaign — combined with incentives for SMEs to process payroll and supplier payments through C-Pay — could significantly shift the revenue mix toward higher-margin B2B transactions without needing to grow the customer base at all.
 
 ## ⚠️ 2. Over a Third of Customers Are at High Churn Risk
 The churn risk segmentation reveals that a significant portion of customers have not transacted in over 60 days. Given that C-Pay earns revenue only when customers transact, dormant accounts represent both lost fee income and a risk of permanent exit if a competitor offers an onboarding incentive.

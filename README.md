@@ -61,14 +61,24 @@ C-Pay should audit C-Rewards engagement among its 173 high-risk customers specif
 ## 📊 3. Transaction Volume and Value Tell Two Different Stories
 Transaction type analysis reveals a clear split between volume leaders and revenue leaders. While Send Money and Cash Out drive the highest number of transactions, Bulk Payments, used by corporates and NGOs to disburse salaries and grants, generate significantly higher fee revenue per transaction despite lower frequency. Cash Out exceeding Cash In is a platform health warning. C-Pay processed more Cash Out transactions (1,229) than Cash In (1,100). In a healthy mobile money ecosystem, Cash In should equal or exceed Cash Out, money flowing into the platform sustains wallet balances and enables further transactions. When Cash Out consistently outpaces Cash In, it signals that customers are using C-Pay as a cash collection point rather than a financial ecosystem, receiving money and immediately withdrawing it rather than keeping balances on the platform to transact further.
 
-✅ Recommendation
+**✅ Recommendationa**
 - C-Pay's B2B sales effort should prioritise onboarding more corporate and government bulk payment clients. A single bulk payment client can generate more fee revenue in one transaction than dozens of individual consumer transactions combined.
 - C-Pay should investigate what is driving Cash Out dominance. If customers are cashing out immediately after receiving remittances, introducing incentives to keep balances on the platform, such as C-Rewards points for wallet-to-wallet transactions or interest on savings deposits, could shift behaviour and improve platform health.
 
-## 📡 4. USSD Has the Highest Failed Transaction Volume — but That's Only Half the Story
-The failed transaction analysis shows USSD leads in absolute failure counts. However, USSD also handles the highest overall transaction volume, so the raw count is misleading. A more meaningful metric is the failure rate — failed transactions as a percentage of total attempts per channel.
+## 📡 4. USSD Has the Highest Failed Transaction Volume
+The failed transaction analysis shows USSD leads in absolute failure counts. However, USSD also handles the highest overall transaction volume, so the raw count is misleading. A more meaningful metric is the failure rate, failed transactions as a percentage of total attempts per channel. The App, C-Pay's most modern and feature-rich channel, has the highest failure rate at 8.54% in comparison to USSD (7.61%) and Agent (7.43%).This finding matters precisely because it defies expectations. USSD is the oldest technology on the platform, dependent on network signal strength, prone to session timeouts, and used predominantly by lower-income customers in areas with weaker connectivity. It would be reasonable to expect USSD to have the worst failure rate. Instead, the App, used by C-Pay's most digitally engaged, typically urban customers, is underperforming both legacy channels on reliability.
 
-✅ Recommendation: C-Pay's engineering team should be given failure rate targets per channel, not absolute counts. Rate-based monitoring catches degrading performance before it becomes a volume problem.
+**Possible implications for C-Pay**
+
+- App failures are more damaging to retention than USSD failures. App users are C-Pay's highest-value, most commercially attractive segment, urban, smartphone-owning, and with access to competitor platforms. A failed transaction on the App does not just inconvenience a customer, it gives them a reason to open a competitor's app instead. USSD users in rural areas have fewer alternatives; App users do not.
+- An 8.54% failure rate means roughly 1 in 12 App transactions fails. Across 2,459 App transactions in the dataset, 210 failed completely. Each failed transaction represents lost revenue, a frustrated customer, and a potential churn trigger, particularly among the urban high-risk customers identified in the churn analysis.
+- Agent transactions are the most reliable channel. At 7.43%, Agent-assisted transactions have the lowest failure rate, likely because human agents can troubleshoot in real time, retry failed transactions, and guide customers through the process. This reliability is one of the reasons agent networks remain critical in markets like Lesotho despite the push toward digital self-service.
+
+**✅ Recommendations**
+- C-Pay's product and engineering teams should conduct a root cause analysis on App failures — are they payment gateway timeouts, session errors, connectivity drops, or something else?
+- Implement real-time failure rate monitoring per channel. Rather than discovering failure trends retrospectively through analysis, C-Pay should set failure rate thresholds per channel, for example, a 5% ceiling — and trigger automated alerts when any channel breaches the threshold. This shifts the team from reactive to proactive on platform reliability.
+- 
+
 
 ## 👥 5. Middle-Aged Male Customers Drive the Highest Average Transaction Values — but Women Are the Larger Opportunity
 The age and gender segmentation shows middle-aged male customers post the highest average transaction values. However, this finding should be read alongside the broader industry context: women in Southern Africa are 36% less likely to own a mobile money account than men, meaning female customers are underrepresented in the data to begin with.

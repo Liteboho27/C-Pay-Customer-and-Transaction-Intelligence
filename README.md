@@ -83,13 +83,10 @@ The failed transaction analysis shows USSD leads in absolute failure counts. How
 **✅ Recommendations**
 - C-Pay's product and engineering teams should conduct a root cause analysis on App failures — are they payment gateway timeouts, session errors, connectivity drops, or something else?
 - Implement real-time failure rate monitoring per channel. Rather than discovering failure trends retrospectively through analysis, C-Pay should set failure rate thresholds per channel, for example, a 5% ceiling — and trigger automated alerts when any channel breaches the threshold. This shifts the team from reactive to proactive on platform reliability.
-- 
-
-
-## 👥 5. Middle-Aged Male Customers Drive the Highest Average Transaction Values — but Women Are the Larger Opportunity
-The age and gender segmentation shows middle-aged male customers post the highest average transaction values. However, this finding should be read alongside the broader industry context: women in Southern Africa are 36% less likely to own a mobile money account than men, meaning female customers are underrepresented in the data to begin with.
-The lower average transaction value among female customers is likely a reflection of lower account limits tied to KYC status and income levels — not lower intent or capacity.
 
 ## 📉 6. Agent Network Growth Has Stalled in the Second Half of 2024
-Month-on-month agent registration analysis shows healthy onboarding in early 2023 followed by a deceleration through 2024. Since agents are C-Pay's primary distribution channel in rural areas — and agent liquidity is the most cited barrier to mobile money adoption in Lesotho — a stalling agent network directly constrains customer growth.
-✅ Recommendation: C-Pay should review its agent recruitment incentive structure. If the commission model is not attractive enough to sustain agent growth, customer acquisition in underserved districts will plateau regardless of marketing spend.
+Month-on-month agent registration analysis shows healthy onboarding in early 2023 followed by a deceleration through 2024. Since agents are C-Pay's primary distribution channel in rural areas and agent liquidity is the most cited barrier to mobile money adoption in Lesotho — a stalling agent network directly constrains customer growth.
+
+**✅ Recommendation**
+
+C-Pay should review its agent recruitment incentive structure. If the commission model is not attractive enough to sustain agent growth, customer acquisition in underserved districts will plateau regardless of marketing spend.
